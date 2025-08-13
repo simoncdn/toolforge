@@ -1,30 +1,11 @@
 <script setup lang="ts">
-const navigation = ref([
-	{
-		title: 'Development tools',
-		icon: 'i-lucide-anvil',
-		path: '#development-tools',
-		children: [
-			{
-				title: 'Kanban',
-				path: '#kanban',
-				active: true
-			},
-			{
-				title: 'Kanban',
-				path: '#kanban',
-			},
-			{
-				title: 'Kanban',
-				path: '#kanban',
-			},
-		]
-	},
-])
+import type { ContentNavigationItem } from '@nuxt/content'
+
+const navigation = inject<Ref<ContentNavigationItem[]>>('navigation')
 </script>
 
 <template>
-	<UContainer>
+	<UContainer class="pb-8">
 		<UPage>
 			<template #left>
 				<UPageAside>
